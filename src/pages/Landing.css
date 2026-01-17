@@ -1,0 +1,951 @@
+/* ===============================
+   ROOT LAYOUT - MODIFIED
+================================ */
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+  overflow-x: hidden;
+  position: relative;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Background pattern */
+.landing-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(79, 70, 229, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* ===============================
+   MAIN CONTENT AREA
+================================ */
+.landing-main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+}
+
+/* ===============================
+   HERO SECTION (Branding + Form)
+================================ */
+.landing-hero {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 70vh;
+}
+
+/* ===============================
+   MOBILE LAYOUT (Default for all screens)
+================================ */
+/* On mobile: Branding (1) → Features (2) → Form (3) */
+
+/* LEFT SECTION (BRANDING) - FIRST ON MOBILE */
+.landing-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  order: 1; /* FIRST on mobile */
+}
+
+.landing-left::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(79, 70, 229, 0.1), transparent 30%);
+}
+
+.landing-left-content {
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  padding: 0 16px;
+  text-align: center;
+}
+
+/* FEATURES SECTION - SECOND ON MOBILE */
+.features-section {
+  width: 100%;
+  padding: 40px 15px;
+  background: rgba(255, 255, 255, 0.02);
+
+  order: 2; /* SECOND on mobile */
+}
+
+/* RIGHT SECTION (FORM) - THIRD ON MOBILE */
+.landing-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 40px 20px;
+  order: 3; /* THIRD on mobile */
+  min-height: 500px;
+}
+
+/* ===============================
+   BRANDING ELEMENTS
+================================ */
+.brand-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-direction: column;
+}
+
+.logo-circle {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #4f46e5, #8b5cf6);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.3);
+}
+
+.logo-text-land {
+  font-size: 24px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4f46e5, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block !important;
+  opacity: 1;
+  visibility: visible;
+}
+
+.brand-tag {
+  font-size: 14px;
+  color: #c7d2fe;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-left: 62px;
+  margin-top: -20px;
+  margin-bottom: 40px;
+}
+
+.brand-headline {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+}
+
+.tagline {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 100%;
+  color: #c7d2fe;
+  margin-top: 40px;
+  font-weight: 400;
+  text-align: center;
+  padding: 0 10px;
+}
+
+/* ===============================
+   FEATURES SECTION STYLES
+================================ */
+.features-section-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 30px;
+  letter-spacing: -0.02em;
+  padding: 0 15px;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.features-section-title .gradient-text {
+  background: linear-gradient(135deg, #4f46e5, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.features-container {
+  width: 100%;
+  margin: 0;
+}
+
+.features-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-bottom: 0;
+  width: 100%;
+  max-width: 360px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  cursor: default;
+  height: 100%;
+  min-height: 180px;
+  width: 100%;
+  max-width: 280px;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.feature-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(79, 70, 229, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  background: rgba(79, 70, 229, 0.1);
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4f46e5;
+  margin-bottom: -40px;
+}
+
+.feature-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-content h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.feature-content p {
+  font-size: 13px;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 220px;
+}
+
+/* ===============================
+   FORM SECTION STYLES
+================================ */
+.background-orb {
+  display: block;
+}
+
+.form-card {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 30px 24px;
+  border-radius: 18px;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.25),
+    0 8px 32px rgba(79, 70, 229, 0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #ffffff;
+}
+
+.form-header-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.form-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+.form-subtitle {
+  font-size: 14px;
+  color: #bdc1ca;
+  line-height: 1.4;
+}
+
+.form-tabs {
+  display: flex;
+  background: #f3f4f673;
+  border-radius: 10px;
+  padding: 4px;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.tab-btn.active {
+  background: #ffffff5b;
+  color: #3933a7;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.auth-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.auth-card input {
+  color: #ffffff;
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 0px;
+  background-color: #ffffff4a;
+  font-size: 14px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.auth-card input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  background-color: #ffffff4a;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+.auth-card input::placeholder {
+  color: #c4ccd8cf;   /* soft gray */
+}
+
+.auth-card button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #4f46e5, #8b5cf6);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  min-height: 44px;
+}
+
+.auth-card button:hover {
+  background: linear-gradient(135deg, #4e46e596, #8a5cf69d);
+}
+
+.auth-card button:active {
+  transform: translateY(1px);
+}
+
+.auth-card button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 13px;
+  text-align: center;
+  background: #fee2e2;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #fecaca;
+  margin-bottom: 10px;
+}
+
+.form-footer {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.login-hint {
+  font-size: 14px;
+  color: #bdc1ca;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.switch-mode {
+  background: none;
+  border: none;
+  color: #4f46e5;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.switch-mode:hover {
+  color: #4338ca;
+  text-decoration: underline;
+}
+
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+================================ */
+
+@media (max-width: 767px) {
+  .features-section {
+    padding: 30px 12px 20px;
+    order: 2 !important; /* Force features to be second */
+  }
+  
+  .landing-left {
+    padding: 25px 16px 20px;
+    order: 1 !important; /* Force branding to be first */
+  }
+  
+  .landing-right {
+    padding: 20px 16px 30px;
+    min-height: auto;
+    order: 3 !important; /* Force form to be third */
+  }
+  
+  .landing-left-content {
+    padding: 0 8px;
+  }
+  
+  .logo-circle {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
+  
+  .logo-text {
+    font-size: 20px;
+  }
+  
+  .brand-tag {
+    margin-left: 0;          /* ✅ remove offset */
+    text-align: center;      /* ✅ center text */
+    width: 100%;
+  }
+  
+  .brand-headline {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+  
+  .tagline {
+    font-size: 15px;
+    margin-bottom: 24px;
+    padding: 0;
+  }
+  
+  .features-section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    max-width: 300px;
+  }
+  
+  .features-list {
+    gap: 16px;
+    max-width: 300px;
+    padding: 0 10px;
+  }
+  
+  .feature-item {
+    padding: 18px;
+    gap: 14px;
+    min-height: 160px;
+    max-width: 260px;
+  }
+  
+  .feature-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
+  
+  .feature-content h4 {
+    font-size: 15px;
+  }
+  
+  .feature-content p {
+    font-size: 12.5px;
+    max-width: 200px;
+  }
+  
+  .form-card {
+    padding: 24px 20px;
+  }
+  
+  .form-header h2 {
+    font-size: 22px;
+  }
+  
+  .form-subtitle {
+    font-size: 13px;
+  }
+  
+  .auth-card input {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+  
+  .auth-card button {
+    padding: 10px;
+    font-size: 14px;
+    min-height: 42px;
+  }
+  
+  .error {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+/* Extra small screens (360px and below) */
+@media (max-width: 360px) {
+  .logo-text {
+    font-size: 18px;
+  }
+  
+  .logo-circle {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  
+  .brand-headline {
+    font-size: 24px;
+  }
+  
+  .tagline {
+    font-size: 14px;
+  }
+  
+  .features-section-title {
+    font-size: 22px;
+    max-width: 260px;
+  }
+  
+  .features-list {
+    max-width: 260px;
+    padding: 0 8px;
+  }
+  
+  .feature-item {
+    padding: 16px;
+    min-height: 150px;
+    max-width: 240px;
+  }
+  
+  .feature-content p {
+    max-width: 180px;
+  }
+}
+
+/* ===============================
+   TABLET AND DESKTOP (768px and up)
+================================ */
+@media (min-width: 768px) {
+  /* Switch to horizontal layout */
+  .landing-hero {
+    flex-direction: row;
+    min-height: 65vh;
+  }
+  
+  /* Reset orders for desktop: Branding (1) and Form (2) side-by-side */
+  .landing-left {
+    order: 1;
+    padding: 60px 30px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  .landing-right {
+    order: 2;
+    padding: 60px 30px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  /* Features moves to bottom on tablet/desktop */
+  .features-section {
+    order: 3;
+    padding: 60px 20px;
+    border-top: none;
+    border-bottom: none;
+    background: rgba(255, 255, 255, 0.02);
+  }
+  
+  .landing-left-content {
+    max-width: 620px;
+    padding: 0;
+    text-align: left;
+  }
+  
+  .brand-header {
+    text-align: left;
+  }
+  
+  .brand-logo {
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .brand-headline {
+    font-size: 42px;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .tagline {
+    font-size: 17px;
+    text-align: left;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  
+  /* Features grid: 2 columns on tablet */
+  .features-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 700px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+  
+  .features-section-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+    padding: 0 20px;
+    max-width: 700px;
+  }
+  
+  .feature-item {
+    padding: 20px;
+    min-height: 200px;
+    max-width: 100%;
+    margin: 0;
+    text-align: left;
+    align-items: flex-start;
+  }
+  
+  .feature-content {
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .feature-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .feature-content h4 {
+    font-size: 17px;
+  }
+  
+  .feature-content p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+  
+  /* Show background orbs on tablet and up */
+  .background-orb {
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.3;
+  }
+  
+  .orb-1 {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, #4f46e5, #8b5cf6);
+    top: 20%;
+    right: 15%;
+  }
+  
+  .orb-2 {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #06b6d4, #0ea5e9);
+    bottom: 30%;
+    left: 10%;
+  }
+  
+  .orb-3 {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #10b981, #34d399);
+    top: 60%;
+    right: 20%;
+  }
+  
+  .form-card {
+    margin-top: 60px;
+  }
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+  .landing-left {
+    padding: 80px 40px;
+  }
+  
+  .landing-right {
+    padding: 80px 40px;
+  }
+  
+  .brand-headline {
+    font-size: 48px;
+  }
+  
+  .logo-text {
+    font-size: 28px;
+  }
+  
+  .brand-tag {
+    font-size: 16px;
+  }
+  
+  .tagline {
+    font-size: 18px;
+  }
+  
+  /* Features grid: 3 columns on desktop */
+  .features-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    row-gap: 40px;
+    max-width: 1100px;
+    padding: 0 30px;
+    margin: 0 auto;
+  }
+  
+  .features-section {
+    padding: 70px 30px;
+  }
+  
+  .features-section-title {
+    font-size: 34px;
+    margin-bottom: 50px;
+    padding: 0 30px;
+    max-width: 1100px;
+  }
+  
+  .feature-item {
+    padding: 22px;
+    min-height: 220px;
+    max-width: 100%;
+    margin: 0;
+    justify-content: flex-start;
+  }
+  
+  .feature-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 22px;
+  }
+  
+  .feature-content h4 {
+    font-size: 18px;
+  }
+  
+  .feature-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 100%;
+  }
+  
+  /* Larger orbs for desktop */
+  .orb-1 {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .orb-2 {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .orb-3 {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .form-card {
+    padding: 36px 32px;
+    max-width: 420px;
+    margin-top: 60px;
+  }
+  
+  .form-header h2 {
+    font-size: 26px;
+  }
+}
+
+/* Large desktop (1200px and up) */
+@media (min-width: 1200px) {
+  .landing-left {
+    padding: 80px 60px;
+  }
+  
+  .landing-right {
+    padding: 80px 60px;
+  }
+  
+  .landing-left-content {
+    max-width: 700px;
+  }
+  
+  .features-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    row-gap: 50px;
+    max-width: calc(100% - 100px);
+    padding: 0 40px;
+    margin-left: -25px;
+  }
+  
+  .features-section {
+    padding: 80px 40px;
+  }
+  
+  .features-section-title {
+    font-size: 34px;
+    margin-bottom: 50px;
+    padding: 0 40px;
+    max-width: 1200px;
+  }
+  
+  .feature-item {
+    min-height: 240px;
+    padding: 24px;
+    max-width: 100%;
+  }
+  
+  .feature-icon {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .feature-content h4 {
+    font-size: 19px;
+  }
+  
+  .feature-content p {
+    font-size: 14.5px;
+    max-width: 100%;
+  }
+  
+  .form-card {
+    max-width: 450px;
+  }
+}
+
+.password-field {
+  position: relative;
+  width: 100%;
+}
+
+.password-field input {
+  padding-right: 40px; /* space for icon */
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.7;
+  user-select: none;
+}
+
+.password-toggle:hover {
+  opacity: 1;
+}

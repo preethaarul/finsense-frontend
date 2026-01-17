@@ -1,0 +1,73 @@
+/* ---------- LIGHT THEME ---------- */
+
+:root {
+  --topbar-height: 64px;
+  --sidebar-width: 240px;
+  --mobile-sidebar-width: 280px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  :root {
+    --topbar-height: 56px;
+  }
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  transition: background 0.3s ease, color 0.3s ease;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Remove any default browser white space */
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* If you have a container that might have padding/margin */
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+
+/* Global Page Header Styles */
+.page-header {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+  letter-spacing: -0.5px;
+  margin: 0 0 24px 0;
+  padding: 0;
+  width: 100%;
+  text-align: left;
+  position: relative;
+}
+
+/* Add a subtle gradient underline */
+.page-header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #4f46e5, #7c3aed);
+  border-radius: 2px;
+}
+
+/* For pages where content is centered, we'll adjust */
+.page-centered {
+  text-align: center;
+}
+
+.page-centered::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
