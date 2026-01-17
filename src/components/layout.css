@@ -1,51 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 .layout {
   display: flex;
   min-height: 100vh;
   background: #f9fafb;
-  flex-direction: column;
 }
 
 .content {
   flex: 1;
-  padding: 24px;
   margin-top: var(--topbar-height);
-  margin-left: 0;
-  transition: margin-left 0.3s ease;
-  width: 100%;
+  margin-left: var(--sidebar-width);
+  padding: 24px;
+  width: calc(100% - var(--sidebar-width));
+  max-width: calc(100vw - var(--sidebar-width));
+  overflow-x: hidden;
+  transition: margin-left 0.3s ease, padding 0.3s ease;
 }
 
-/* For desktop/large screens - side by side layout */
-@media (min-width: 1024px) {
+@media (max-width: 768px) {
   .layout {
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .content {
-    margin-left: var(--sidebar-width);
-    margin-top: var(--topbar-height);
-    width: calc(100% - var(--sidebar-width));
-  }
-}
 
-/* Tablet styles */
-@media (max-width: 1023px) and (min-width: 768px) {
   .content {
-    padding: 20px;
+    margin-left: 0;
     margin-top: var(--topbar-height);
-  }
-}
-
-/* Mobile styles */
-@media (max-width: 767px) {
-  .content {
+    width: 100%;
+    max-width: 640px;
     padding: 16px;
-    margin-top: var(--topbar-height);
-  }
-}
-
-/* Extra small mobile devices */
-@media (max-width: 480px) {
-  .content {
-    padding: 12px;
+    overflow-x: hidden;
   }
 }

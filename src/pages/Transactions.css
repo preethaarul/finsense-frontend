@@ -360,13 +360,11 @@ h1 {
   }
   
   .filter-export-container {
-    display: none;
-  }
-  
-  .mobile-filter {
     display: flex;
     justify-content: center;
   }
+  
+
   
   .expense-table {
     display: none;

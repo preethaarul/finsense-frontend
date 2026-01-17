@@ -466,9 +466,7 @@
   text-decoration: underline;
 }
 
-/* ===============================
-   RESPONSIVE BREAKPOINTS
-================================ */
+
 
 @media (max-width: 767px) {
   .features-section {
@@ -502,8 +500,8 @@
   }
   
   .brand-tag {
-    margin-left: 0;          /* ✅ remove offset */
-    text-align: center;      /* ✅ center text */
+    margin-left: 0;          
+    text-align: center;      
     width: 100%;
   }
   
@@ -580,52 +578,18 @@
     font-size: 12px;
     padding: 8px;
   }
+  .brand-logo{
+    margin-bottom: 20px;
+  }
+   .brand-tag{
+    margin-top: 15px;
+   }
+  
+ 
 }
 
-/* Extra small screens (360px and below) */
-@media (max-width: 360px) {
-  .logo-text {
-    font-size: 18px;
-  }
-  
-  .logo-circle {
-    width: 40px;
-    height: 40px;
-    font-size: 16px;
-  }
-  
-  .brand-headline {
-    font-size: 24px;
-  }
-  
-  .tagline {
-    font-size: 14px;
-  }
-  
-  .features-section-title {
-    font-size: 22px;
-    max-width: 260px;
-  }
-  
-  .features-list {
-    max-width: 260px;
-    padding: 0 8px;
-  }
-  
-  .feature-item {
-    padding: 16px;
-    min-height: 150px;
-    max-width: 240px;
-  }
-  
-  .feature-content p {
-    max-width: 180px;
-  }
-}
 
-/* ===============================
-   TABLET AND DESKTOP (768px and up)
-================================ */
+
 @media (min-width: 768px) {
   /* Switch to horizontal layout */
   .landing-hero {
@@ -769,162 +733,8 @@
   }
 }
 
-/* Desktop (1024px and up) */
-@media (min-width: 1024px) {
-  .landing-left {
-    padding: 80px 40px;
-  }
-  
-  .landing-right {
-    padding: 80px 40px;
-  }
-  
-  .brand-headline {
-    font-size: 48px;
-  }
-  
-  .logo-text {
-    font-size: 28px;
-  }
-  
-  .brand-tag {
-    font-size: 16px;
-  }
-  
-  .tagline {
-    font-size: 18px;
-  }
-  
-  /* Features grid: 3 columns on desktop */
-  .features-list {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    row-gap: 40px;
-    max-width: 1100px;
-    padding: 0 30px;
-    margin: 0 auto;
-  }
-  
-  .features-section {
-    padding: 70px 30px;
-  }
-  
-  .features-section-title {
-    font-size: 34px;
-    margin-bottom: 50px;
-    padding: 0 30px;
-    max-width: 1100px;
-  }
-  
-  .feature-item {
-    padding: 22px;
-    min-height: 220px;
-    max-width: 100%;
-    margin: 0;
-    justify-content: flex-start;
-  }
-  
-  .feature-icon {
-    width: 52px;
-    height: 52px;
-    font-size: 22px;
-  }
-  
-  .feature-content h4 {
-    font-size: 18px;
-  }
-  
-  .feature-content p {
-    font-size: 14px;
-    line-height: 1.6;
-    max-width: 100%;
-  }
-  
-  /* Larger orbs for desktop */
-  .orb-1 {
-    width: 200px;
-    height: 200px;
-  }
-  
-  .orb-2 {
-    width: 150px;
-    height: 150px;
-  }
-  
-  .orb-3 {
-    width: 120px;
-    height: 120px;
-  }
-  
-  .form-card {
-    padding: 36px 32px;
-    max-width: 420px;
-    margin-top: 60px;
-  }
-  
-  .form-header h2 {
-    font-size: 26px;
-  }
-}
 
-/* Large desktop (1200px and up) */
-@media (min-width: 1200px) {
-  .landing-left {
-    padding: 80px 60px;
-  }
-  
-  .landing-right {
-    padding: 80px 60px;
-  }
-  
-  .landing-left-content {
-    max-width: 700px;
-  }
-  
-  .features-list {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-    row-gap: 50px;
-    max-width: calc(100% - 100px);
-    padding: 0 40px;
-    margin-left: -25px;
-  }
-  
-  .features-section {
-    padding: 80px 40px;
-  }
-  
-  .features-section-title {
-    font-size: 34px;
-    margin-bottom: 50px;
-    padding: 0 40px;
-    max-width: 1200px;
-  }
-  
-  .feature-item {
-    min-height: 240px;
-    padding: 24px;
-    max-width: 100%;
-  }
-  
-  .feature-icon {
-    width: 56px;
-    height: 56px;
-  }
-  
-  .feature-content h4 {
-    font-size: 19px;
-  }
-  
-  .feature-content p {
-    font-size: 14.5px;
-    max-width: 100%;
-  }
-  
-  .form-card {
-    max-width: 450px;
-  }
-}
+
 
 .password-field {
   position: relative;
